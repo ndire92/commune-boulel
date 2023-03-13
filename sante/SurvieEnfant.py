@@ -4,81 +4,58 @@ from django import forms
 
 
 class survienf(ModelForm):
+    CodeDistrict = forms.CharField(label='Code District', widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    CodeDistrict = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
+    NomDistrict = forms.CharField(label='Nom District', widget=forms.TextInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PtgEnft0a59MoisAyantDiarrhe = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PptCasPneuMoni0a59Mois = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PptEnftPneumoniGravSaturatO2Mesure = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PptEnft0a59MoisSouffranAnemi = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PptEnft0a59moisPresenttAnemi = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    CasEnftMoins5ansBSoignCtrDiarrhCentr = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreCasDiarrhReferNivComm = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PtgEnft6a11MoisSupplemtEVitA_Routin = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PtgEnft12a59MoisSupplemt_VitARoutin = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
 
-    CodeDomaine = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    CodeTemps = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    PourcentageEnfants0a59MoisAyantFaitUneDiarrhe = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20ProportionDeCasDePneuMonie0a59Mois = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20ProportionEnfantsAvecPneumonieGraveDontLaSaturationEnoxygèneAEtemesuree = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20ProportionEnfantsDe0a59MoisSouffrantAnemie = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20ProportionEnfantsDe0a59moisPresentantUneAnemie = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    SAVEDeCasEnfantsDeMoinsDe5ansCorrectementSoignesContreLaDiarrheeDansLesCentresDeSanteCommunautairesM = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    NombreDeCasDeDiarrheeReferesParleNiveauCommunautaire = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageEnfantsDe6a11MoisSupplementesEnVitamineAEnRoutine = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageEnfantsDe12a59MoisSupplementesEnVitamineAEnRoutine = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageEnfantsDe12a59MoisDeParasitésEnRoutine = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20ProportionEnfantsDe0a59MoisAyantUnNuméroEtatcivil = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20EnfantsDe0a59MoisReçusPourTraumatismeDuSaUnAccidentEtOuAUnActedeViolenceNombreTotalEnfants0a59MoisVusenConsultation = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    DiarrheeReferesParleNiveauCommunautaire0a59mois = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    SupplementationSystematiqueEnVitamineADesEnfantsDe6a59Mois = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageEnfantsDe6a59MoisSupplementesEnVitamineAEnRoutine = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    PourcentageEnfants12a59MoisDeparasitesEnRoutineOK = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20NombreDeCasDePneumonies0a59mois = forms.CharField(widget=forms.NumberInput(
-        attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGraveAvechypoxietraiteeParoxygénoThérapieAuNiveauDesPPSFeminin = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20NombreEnFantsDe0a59MoisPresentantUnePneumonieGraveAvecHypoxieTraiteeParoxygénoThérapieAuNiveauDesPPSMasculin = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquilaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSFeminin = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20NombreEnfantsDe0a59MoisPresentantUnePneumonieGravecHezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPSMasculin = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
-
-    R20PourcentageEnfantsde0a59MoisPresentantUnePneumonieGravechezquiLaSaturationEnOxygèneAEteMesureeAuNiveauDesPPS = forms.CharField(
-        widget=forms.NumberInput(attrs={'placeholder': '', 'style': 'width: 900px;', 'class': 'form-control'}))
+    PptEnft0a59MoisAyantNum_EtatC = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    Enfts0a59MoisReçuTraumaAccidt_ViolencNbreTot = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    DiarrheRefer_NivComm0a59mois = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    SuppltSystematic_VitADEnfts6a59Mois = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PtgEnfts6a59MoisSuppl_VitA_Routin = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PtgEnft12a59MoisDeparasit_Routin = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreCasPneumoni0a59mois = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEnft0a59MoisPrestPneumoniGrav_hypoxiTPTh_NivPSF = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEnFt0a59MoisPrestPneumoniGrav_HTPTh_NivPPSM = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEnft0a59MoisPrestPneumoniGrav_SaturatO2NivPPSF = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    NbreEnft0a59MoisPrestPneumoniGrav_SatO2NivPPSMa = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    PtgEnft0a59MoisPrestPneumoniGrav_SatO2NivPPS = forms.DecimalField(widget=forms.NumberInput(
+        attrs={'placeholder': '', 'style': 'width: 800px;', 'class': 'form-control'}))
+    date = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
+    date_modification = forms.CharField(widget=forms.DateInput(
+        attrs={'type': 'date', 'style': 'width: 300px;', 'class': 'form-control'}))
 
     class Meta:
         model = SurvieEnfant
