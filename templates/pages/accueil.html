@@ -1,0 +1,103 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+
+<title>{% block title%}Commun de boulele{%endblock%}</title>
+
+
+    <header>
+    
+    </header>
+
+    <div class="body container">
+    {% block body  %}
+<div class="carouse">
+	<div class="carousel-inner">
+		
+		<div class="carousel-item active">
+			<img src="{% static '/imge/jF.jpg' %}" class="d-block w-100" alt="...">
+
+		</div>
+	</div>
+
+	<div class="info-com">
+		<div class="row">
+			<div class="col-sm-4 col1">
+				<div class="img">
+					<img src="{% static '/imge/logo-boulel.jpg'%}" alt="logo" width="300" height="300">
+				</div>
+				<div>
+
+				</div>
+			</div>
+			<div class="col-sm-8 col2"  style="background-color:  #258baf">
+				<div class="info-flottan-text" style="color: #fff">
+					<div class="info-flottan-text-title">
+						<h5 class="" >Commune de Boulel</h5>
+					</div>
+					
+					<p align="">Cette plateforme met ensemble des données clés et informations essentielles sur les différents axes prioritaires de développement au niveau de la commune de <b>Boulel</b> a savoir l'education et la santé</a> </p>
+				</div>
+				
+				<div class="out-indic mx-auto">
+					<div class="row my-3 mx-auto"><div class="col-6 col-indic"><a href=""class="btn btn-outline-success" ><img src="{% static '/imge/education icon.png'%}" alt="logo" width="50" height="50">  Education</a></div>
+					</div>
+					<div class="row my-1 mx-auto">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 container">
+    <div class=" px-4 my-5 row row-cols-sm-12">
+        <div class="jumbotron text-center">
+            <div style="display: flex; width: 100%; height: 100%; color:  #258baf">
+                <h2>Boulel<span> </span></h2></div></div><div class="col-sm-6">
+                    <p class="para" style="font-size: 25px">
+                        Joal-Fadiouth est une commune du Sénégal située à l'extrémité de la Petite-Côte, au sud-est de Dakar. Elle réunit en réalité deux villages, Joal – le plus gros –, établi sur le littoral, et Fadiouth – le plus visité –, une île artificielle constituée d'amoncellements de coquillages et reliée à la côte par un pont de bois. Léopold Senghor y est né..</p></div>
+                        <div class="col-sm-6">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7732.987606428501!2d-15.538761141308594!3d14.282717260777451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xee96f004900ef95%3A0xa814e22e24f056af!2sLyc%C3%A9e%20de%20Boulel!5e0!3m2!1sfr!2ssn!4v1680749930971!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></div>
+
+
+
+       
+<div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 container">
+
+    <div class=" px-4 my-5 row row-cols-sm-12">
+        <div >
+            <h1 style="background-color:  #258baf; color: white"><h3>{{tassur}}</h3></p></div></div></div>
+
+
+    <div class="row justify-content-center patenaires">
+	<h1 style=" color: #258baf;text-align: center;">Nos Partenaires !</h1>
+	<div class="col-sm-2 text-center">
+		<div class="card patenaire-item">
+		  <a target="_blank" href=""><img src="{% static 'as/partenaire/igt.png'%}" class="card-img-top" alt=""><br><b></b></a>
+		</div>
+	</div>
+	<div class="col-sm-2 text-center">
+		<div class="card patenaire-item">
+		  <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/aphrc.png'%}" alt="APHRC"><br> <b></b></a>
+		</div>
+	</div>
+
+	<div class="col-sm-2 text-center">
+		<div class="card patenaire-item">
+		  <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/ensa.jpg'%}" alt=""><br> <b></b></a>
+		</div>
+	</div>
+	
+	
+	
+	
+</div>    
+ {% include 'layout/chart.html'%}
+{% endblock %}
+</div>
+
+</body>
+</html>
