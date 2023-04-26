@@ -1,8 +1,10 @@
 
 from django import forms
-from .models import Profile,Post
+from .models import Post,UserProfile
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib import messages
+
 
 
 
@@ -19,37 +21,21 @@ class SignUpForm(UserCreationForm):
         attrs={'placeholder': '', 'class': 'form-control'}))
     password2= forms.CharField(label='confirmer password', widget=forms.PasswordInput(
         attrs={'placeholder': '', 'class': 'form-control'}))
-    
-    
-    
+
+
+
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name','email', 'password1', 'password2')
-        
-        
+
+
     def save(self, commit=True):
         user = super(SignUpForm, self).save(commit=False)
         user.email = self.cleaned_data['email']
         if commit:
             user.save()
             return user
-        
-        
-class UserForm(forms.ModelForm):
-    description = forms.CharField(label='Description', widget=forms.TextInput(
-        attrs={'placeholder': '', 'class': 'form-control'}))
-    phone = forms.CharField(label='Tel', widget=forms.TextInput(
-        attrs={'placeholder': '', 'class': 'form-control'}))
-    addresse = forms.CharField(label='Adresse', widget=forms.TextInput(
-        attrs={'placeholder': '', 'class': 'form-control'}))
 
-    class Meta:
-        model = Profile
-        fields = ['description', 'phone', 'addresse', 'profile_pic']
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['profile_pic'].widget.attrs.update({'class': 'form-control'})
 
 class PostForm(forms.ModelForm):
     title = forms.CharField(label='Titre',widget=forms.TextInput(attrs={
@@ -62,3 +48,28 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title' ,'content', 'image')
+
+
+
+
+
+class UserProfileForm(forms.ModelForm):
+    description = forms.CharField(label='Code Commune',widget=forms.TextInput(
+        attrs={'placeholder': ' ', 'style': 'width: 800px;', 'class': 'form-control'}))
+    phone_number= forms.CharField(label='Code Commune',widget=forms.NumberInput(
+        attrs={'placeholder': ' ', 'style': 'width: 800px;', 'class': 'form-control'}))
+    address= forms.CharField(label='Code Commune',widget=forms.TextInput(
+        attrs={'placeholder': ' ', 'style': 'width: 800px;', 'class': 'form-control'}))
+    class Meta:
+        model = UserProfile
+        fields = ['description','phone_number','address','profile_picture']
+
+    def save(self, commit=True, user=None):
+        profile = super(UserProfileForm, self).save(commit=False)
+        profile.user = user
+        if commit:
+            profile.save()
+        return profile
+
+
+

@@ -3,20 +3,20 @@
 
 
 
-<title>{% block title%}Commun de boulele{%endblock%}</title>
+<title>{% block title%}Commun de boulel{%endblock%}</title>
 
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <header>
-    
+
     </header>
 
     <div class="body container">
     {% block body  %}
 <div class="carouse">
 	<div class="carousel-inner">
-		
+
 		<div class="carousel-item active">
-			<img src="{% static '/imge/jF.jpg' %}" class="d-block w-100" alt="...">
+			<img src="{% static '/imge/jF.jpg' %}" class="d-block w-100" style="max-height: 500px;" alt="...">
 
 		</div>
 	</div>
@@ -36,19 +36,22 @@
 					<div class="info-flottan-text-title">
 						<h5 class="" >Commune de Boulel</h5>
 					</div>
-					
-					<p align="">Cette plateforme met ensemble des données clés et informations essentielles sur les différents axes prioritaires de développement au niveau de la commune de <b>Boulel</b> a savoir l'education et la santé</a> </p>
+
+					<p align="">Cette plateforme met ensemble des données clés et informations essentielles sur les différents axes prioritaires de développement au niveau de la commune de <b>Boulel</b> à savoir l'education et la santé</a> </p>
 				</div>
-				
+
 				<div class="out-indic mx-auto">
-					<div class="row my-3 mx-auto"><div class="col-6 col-indic"><a href=""class="btn btn-outline-success" ><img src="{% static '/imge/education icon.png'%}" alt="logo" width="50" height="50">  Education</a></div>
+					<div class="row my-3 mx-auto">
+					    <div class="col-6 col-indic"><a href="{% url 'education' %}"class="btn btn-outline-success" ><img src="{% static '/imge/education icon.png'%}" alt="logo" width="50" height="50">  Education</a></div>
+					    <div class="col-6 col-indic"><a href="{% url 'sante' %}"class="btn btn-outline-success" ><img src="{% static '/imge/sante icon.png'%}" alt="logo" width="50" height="50">  Santé</a></div>
+
 					</div>
 					<div class="row my-1 mx-auto">
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 
@@ -56,15 +59,52 @@
     <div class=" px-4 my-5 row row-cols-sm-12">
         <div class="jumbotron text-center">
             <div style="display: flex; width: 100%; height: 100%; color:  #258baf">
-                <h2>Boulel<span> </span></h2></div></div><div class="col-sm-6">
-                    <p class="para" style="font-size: 25px">
-                        Joal-Fadiouth est une commune du Sénégal située à l'extrémité de la Petite-Côte, au sud-est de Dakar. Elle réunit en réalité deux villages, Joal – le plus gros –, établi sur le littoral, et Fadiouth – le plus visité –, une île artificielle constituée d'amoncellements de coquillages et reliée à la côte par un pont de bois. Léopold Senghor y est né..</p></div>
+                <h2>Commune de Boulel<span> </span></h2></div></div><div class="col-sm-6">
+                    <p class="para" style="font-size: 17px">
+                 Boulel fut fondé en 1934 dans le cadre de l’opération dite des « Terres neuves de Kafrine »
+qui avait un double objectif : « décongestionner » les vieux terroirs sereer du Sine d’une
+part, et faire barrage à la poussée des Mourides venant du Baol, au nord, d’autre part. L’État
+colonial a ainsi déplacé de force des paysans sereer dans les cantons les plus densément du
+bassin arachidier du centre-ouest pour les installer plus au sud-est, dans le Saloum oriental,
+au nord de la haute vallée du Saloum, espace faiblement occupé par des pasteurs peuls. Ce
+transfert autoritaire de population de l’avant-guerre va finalement favoriser une émigration
+spontanée basée, cette fois-ci, sur les liens sociaux entre les villages des Terres Neuves de
+Boulel et les terroirs sereer d’origine. Ce mouvement s’amplifia dans les années soixante. Le
+village-centre de Boulel a servi de point d’appui à l’extension vers l’est de la colonisation
+agricole sereer. Le peuplement serrer de la commune de Boulel remonte à la « migration
+forcée » initiée par l’administration coloniale en 1934. Les relations familiales avec les
+villages d’origine sont restées très fortes ; avec des retours et de nouvelles arrivées. Les
+Wolofs affluèrent également vers les Terres Neuves de Kaffrine. 
+Boulel, commune rurale des Terres Neuves, est à 20 km au nord du Chef-lieu de région
+Kaffrine, à environ 255 km de Dakar, dans l’arrondissement de Gniby, le département et la
+région de Kaffrine. Boulel est desservie par la RN11 sur l’axe Kaffrine-Touba. Les communes
+environnantes sont Kahi au sud, Gniby au nord, Dianké Souf au sud-est, Ndioum Gainthie à
+l’est et Ndiognick au sud-ouest. Boulel est peuplé, par ordre d’importance, par les Wolofs,
+les Sérères et les Peulhs, les trois principaux groupes ethniques du Sénégal. 
+La population communale en 2013 est de 23 408 habitants qui sont répartis dans cinquante-
+quatre (51) établissements humains, soit 22 villages et 19 hameaux selon l’Agence Nationale
+de la Statistique et de la Démographie. Les principaux équipements et services sont localisés
+le long de la RN11, principalement dans le chef-lieu. De nombreux villages sont éloignés des
+pôles de services sanitaires, éducatifs, administratifs, marchands et artisanaux. La charrette
+et les motos sont les principaux moyens de déplacement dans l’espace communal. Le rayon
+moyen d’accès à un service sanitaire dépasse les 5 km. Il existe un seul lycée et collège dans
+la commune. 
+La commune de Boulel est une zone d’élevage et de cultures pluviales extensives, l’arachide,
+le mil, le maïs. La sécheresse des années 1970 est responsable d’un exode rural massif vers
+les centres urbains et les terres neuves de Koumpentoum. Les colons quittèrent Boulel dans
+ce contexte des années 1970 de déprise agricole. Cette sécheresse est responsable d’un
+déficit vivrier qui a accéléré le changement des habitudes alimentaires des populations
+rurales au profit du riz. L’insécurité alimentaire est un risque social majeur dans la commune
+qui est une dans un processus de diversification de son agriculture au profit des cultures
+maraîchères grâce à l’aménagement d’un Domaine Agricole Communautaire (DAC) par
+l’État.
+                        </p></div>
                         <div class="col-sm-6">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7732.987606428501!2d-15.538761141308594!3d14.282717260777451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xee96f004900ef95%3A0xa814e22e24f056af!2sLyc%C3%A9e%20de%20Boulel!5e0!3m2!1sfr!2ssn!4v1680749930971!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></div>
+							<img src="{% static '/imge/Localisation boule l ok.png' %}" class="" width="100%" height="100%" alt="About Images">	</div></div></div>
 
 
 
-       
+
 <div class="shadow-lg p-3 mb-5 bg-body rounded mt-5 container">
 
     <div class=" px-4 my-5 row row-cols-sm-12">
@@ -72,30 +112,282 @@
             <h1 style="background-color:  #258baf; color: white"><h3>{{tassur}}</h3></p></div></div></div>
 
 
-    <div class="row justify-content-center patenaires">
-	<h1 style=" color: #258baf;text-align: center;">Nos Partenaires !</h1>
-	<div class="col-sm-2 text-center">
-		<div class="card patenaire-item">
-		  <a target="_blank" href=""><img src="{% static 'as/partenaire/igt.png'%}" class="card-img-top" alt=""><br><b></b></a>
-		</div>
-	</div>
-	<div class="col-sm-2 text-center">
-		<div class="card patenaire-item">
-		  <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/aphrc.png'%}" alt="APHRC"><br> <b></b></a>
-		</div>
-	</div>
 
-	<div class="col-sm-2 text-center">
-		<div class="card patenaire-item">
-		  <a target="_blank" href=""> <img class="card-img-top" src="{% static 'as/partenaire/ensa.jpg'%}" alt=""><br> <b></b></a>
-		</div>
-	</div>
-	
-	
-	
-	
-</div>    
+
+
+
+
+</div>
  {% include 'layout/chart.html'%}
+
+       <div class="row">
+          <div class="col-md-12 col-lg-6">
+             <div class="card card-chart">
+                <div class="card-header">
+                   <div class="row align-items-center">
+                      <div class="col-6">
+                         <h5 class="card-title"></h5>
+                      </div>
+                      <div class="col-6">
+                         <ul class="list-inline-group text-right mb-0 pl-0">
+                            <li class="list-inline-item">
+                               <div class="form-group mb-0 amount-spent-select">
+
+                               </div>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-body">
+                   <canvas id="myBarChart"></canvas>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+             <div class="card card-chart">
+                <div class="card-header">
+                   <div class="row align-items-center">
+                      <div class="col-6">
+                         <h5 class="card-title"></h5>
+                      </div>
+                      <div class="col-6">
+                         <ul class="list-inline-group text-right mb-0 pl-0">
+                            <li class="list-inline-item">
+                               <div class="form-group mb-0 amount-spent-select">
+
+                               </div>
+                            </li>
+                         </ul>
+                      </div>
+                   </div>
+                </div>
+                <div class="card-body">
+                    <canvas id="myPieChart"></canvas>
+                </div>
+             </div>
+          </div>
+       </div>
+
+       <div class="row">
+         <div class="col-md-12 col-lg-6">
+            <div class="card card-chart">
+               <div class="card-header">
+                  <div class="row align-items-center">
+                     <div class="col-6">
+                        <h5 class="card-title"></h5>
+                     </div>
+                     <div class="col-6">
+                        <ul class="list-inline-group text-right mb-0 pl-0">
+                           <li class="list-inline-item">
+                              <div class="form-group mb-0 amount-spent-select">
+
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-body">
+                  <div ><canvas id="myChart"></canvas></div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12 col-lg-6">
+            <div class="card card-chart">
+               <div class="card-header">
+                  <div class="row align-items-center">
+                     <div class="col-6">
+                        <h5 class="card-title"></h5>
+                     </div>
+                     <div class="col-6">
+                        <ul class="list-inline-group text-right mb-0 pl-0">
+                           <li class="list-inline-item">
+                              <div class="form-group mb-0 amount-spent-select">
+
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="card-body">
+                 <canvas id="myPolarAreaChart"></canvas>
+               </div>
+            </div>
+         </div>
+
+      </div>
+    </div>
+
+    {% include 'includes/chart.html'%}
+
+
+<script>
+ // Get the canvas element
+var ctx = document.getElementById('myChart').getContext('2d');
+
+// Define the chart data
+var chartData = {
+    labels:['Gouvernance', 'Equipements', 'Personnel', 'Performance', 'Access'],
+    datasets: [{
+        label: 'Education',
+        data: [{{dimgou}}, {{dimequ}}, {{dimper}}, {{dimperf}}, {{dimacc}}],
+   backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 5
+    }]
+};
+
+// Create the chart
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: chartData,
+    options: {}
+});
+
+
+</script>
+<script>
+// Get the canvas element
+var ctx = document.getElementById('myPieChart').getContext('2d');
+
+// Define the chart data
+var chartData = {
+    labels:['Gouvernance', 'Equipements', 'Personnel', 'Performance', 'Access'],
+    datasets: [{
+        label: 'Colors',
+        data: [{{dimgou}}, {{dimequ}}, {{dimper}}, {{dimperf}}, {{dimacc}}],
+      backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Create the chart
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: chartData,
+    options: {}
+});
+
+</script>
+
+<script>
+// Get the canvas element
+var ctx = document.getElementById('myBarChart').getContext('2d');
+
+// Define the chart data
+var chartData = {
+    labels: ['Paludisme', 'Reproduction Jeune', 'Planification Familiale', 'Survie Enfant', 'Vaccination Routine'],
+    datasets: [{
+        label: 'Santé',
+
+        data:[{{palu}}, {{repro}}, {{plan}}, {{survie}}, {{vacc}}],
+         backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+        ],
+
+        borderWidth: 1
+    }]
+};
+
+// Create the chart
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: chartData,
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+</script>
+<script>
+
+// Get the canvas element
+var ctx = document.getElementById('myPolarAreaChart').getContext('2d');
+
+// Define the chart data
+var chartData = {
+    labels: ['Paludisme', 'Reproduction Jeune', 'Planification Familiale', 'Survie Enfant', 'Vaccination Routine'],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [{{palu}}, {{repro}}, {{plan}}, {{survie}}, {{vacc}}],
+   backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Create the chart
+var myChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: chartData,
+    options: {}
+});
+
+</script>
 {% endblock %}
 </div>
 
